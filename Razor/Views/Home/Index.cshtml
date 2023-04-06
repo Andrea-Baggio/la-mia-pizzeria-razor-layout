@@ -4,10 +4,23 @@
     var nome = "Andrea";
     var cognome = "Baggio";
 
+    @functions {
+        public int Sum(int n)
+        {
+            int result = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                result += i;
+            }
+            return result;
+        }
+    }
 }
 
 <div class="text-center">
     @{
         <h2>@nome @cognome</h2>
+
+        <span>@Sum(3)</span>
     }
 </div>
